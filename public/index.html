@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <!--    <link rel="icon" href="%PUBLIC_URL%/images/logo.ico"/>-->
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000"/>
+    <base href="%PUBLIC_URL%/"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-LPvXVVAlyPoBSGkX8UddpctDks+1P4HG8MhT7/YwqHtJ40bstjzCqjj+VVVDhsCo" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <style>
+        #app {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fafafa;
+            width: 100%;
+            min-height: 100%;
+            z-index: 1000;
+            display: flex;
+        }
+        .loading-spinner {
+            position: absolute;
+            top: calc(50% - 65px);
+            left: calc(50% - 65px);
+        }
+    </style>
+
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<div id="root" class="rtl" style="position: relative">
+    <img src="/images/spinner.gif" class="loading-spinner" alt="spinner" />
+</div>
+
+<div id="alert-wrapper"></div>
+<div id="modal-wrapper"></div>
+<div id="backdrop-wrapper"></div>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"/>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<script type="text/javascript">
+   window.addEventListener("scroll",()=>{
+       var header=document.querySelector("header")
+       header.classList.toggle("header--active",window.scrollY>0)
+   })
+
+   window.addEventListener("load",()=>{
+       document.addEventListener("click",(event)=>{
+           if (!event.target.matches('.menu__btn') &&
+               !event.target.matches('.header__img') &&
+               !event.target.matches('.header__user-name') &&
+               !event.target.matches('.iconify')
+           ) {
+               var dropdowns = document.getElementById("dropdown");
+               if( dropdowns && dropdowns.classList.contains('menu__dropdown--open'))
+               dropdowns.classList.remove('menu__dropdown--open');
+           }
+       })
+   })
+</script>
+
+</body>
+</html>

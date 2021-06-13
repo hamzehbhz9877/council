@@ -1,0 +1,55 @@
+.add-btn,.prev-btn {
+  margin-left: 2rem;
+  background: linear-gradient(-45deg, #293e92 0%, #293e92 33%, #465186 100%);
+
+  &:hover {
+    background: linear-gradient(-45deg, #293e92f0 0%, rgba(58, 75, 140, 0.94) 33%, #465186 100%);
+  }
+  color: white;
+  width: max-content;
+}
+
+
+.prev-btn{
+  margin-left: 0;
+}
+
+.info {
+  background-color: darkcyan;
+
+  &:hover {
+    background: #209f9f;
+  }
+}
+
+.formik-search__btn{
+  background-color: var(--success);
+  &:hover {
+    background: rgb(34, 181, 73);
+  }
+  color: white;
+}
+
+.formik-search__btn:hover,.add-btn:hover{
+  color: white;
+}
+
+
+.delete, .edit, .info {
+  margin-left: .5rem;
+}
+
+.btn-warning {
+  color: white;
+}
+
+.btn-primary {
+
+  border: none;
+
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem #46518680;
+    outline: none;
+  }
+}

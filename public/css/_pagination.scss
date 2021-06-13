@@ -1,0 +1,26 @@
+@use "colors" as colors;
+
+.page-link{
+  color:  #293e92;
+}
+.active-link span, .active-link span:hover {
+  background: colors.$x10;
+}
+
+.active-link span,.active-link span:hover {
+  color: white;
+}
+
+.page-link {
+  padding:0.5rem 1rem !important
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+}

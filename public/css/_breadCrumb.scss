@@ -1,0 +1,11 @@
+
+.breadcrumb{
+  &__item{
+    color: rgba(255, 255, 255,.54);
+  }
+  &-wrapper {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2rem;
+  }
+}

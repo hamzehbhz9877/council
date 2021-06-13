@@ -1,0 +1,288 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "BYekan";
+  src: url("../fonts/BYekan-webfont.eot") format("eot"), url("../fonts/BYekan-webfont.woff") format("woff"), url("../fonts/BYekan-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  direction: rtl;
+  font-family: "BYekan" !important;
+  font-size: clamp(1.4rem, 1.3vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #f3f5f7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+*, ::before, ::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  color: #707d8a !important;
+  font-size: 1.4rem;
+  vertical-align: middle !important;
+  min-width: 970px !important;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.7rem 0.5rem !important;
+}
+
+label {
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.75rem !important;
+}
+
+.form-group + .form-group {
+  margin-top: 2rem;
+}
+
+body, #root, .login {
+  min-height: 100vh;
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+input[type=checkbox] {
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+
+/*heading*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal;
+  margin-bottom: 1.3rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 4.8vw, 4.8rem);
+}
+
+h2 {
+  font-size: clamp(2.8rem, 3.4vw, 3.4rem);
+}
+
+h3 {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+
+h4 {
+  font-size: clamp(1.6rem, 1.8vw, 1.8rem);
+}
+
+h5 {
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+}
+
+h6 {
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+}
+
+a {
+  text-decoration: none;
+  font-size: clamp(1.4rem, 1.3vw, 1.6rem);
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  outline: none;
+}
+
+p {
+  margin: 1em 0;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+small {
+  font-size: 0.833em;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+code, pre, input, button, textarea {
+  font-family: "BYekan" !important;
+}
+
+button {
+  font-size: clamp(1.4rem, 1.3vw, 1.6rem);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+hr {
+  border: 1px solid var(--c6);
+  clear: both;
+}
+
+blockquote {
+  padding: 0.2em 1em 0.2em 2em;
+  border-left: 3px solid #eee;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+input[type=number] {
+  direction: rtl !important;
+}
+
+hr {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-top: 1px solid #aaa;
+  clear: both;
+}
+
+button, input, textarea {
+  font-size: 1.4rem !important;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  padding: 0.82rem;
+}
+
+.invited {
+  margin-top: 2rem;
+}
+
+.table-search {
+  margin-bottom: 3.9rem;
+}
+
+button + button {
+  margin-right: 1rem;
+}
+
+.form-select-lg {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.error {
+  color: red;
+  display: block;
+  font-size: 1.3rem;
+  padding-top: 0.7rem;
+}
+
+.basic-single {
+  font-size: 1.4rem;
+}
+
+.forget-password {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 97% !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 96% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 95% !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

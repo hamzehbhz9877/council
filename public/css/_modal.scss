@@ -1,0 +1,33 @@
+.Modal {
+  background-color: white;
+  width: min(90%, 500px);
+  box-shadow: 0 0 10px -5px;
+  border-radius: .5rem;
+  padding: 1em 1.5em;
+  margin: 3rem auto;
+  height: max-content;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #0000009e;
+  transition: all .1s ease;
+  display: flex;
+  overflow-y: auto;
+  padding: 3rem 0;
+  z-index:121;
+}
+
+.ReactModal__Body--open{
+  overflow-y: hidden;
+}
+
+@media (min-width: 768px) {
+  .Modal {
+    margin: auto;
+  }
+}

@@ -1,0 +1,56 @@
+@use "colors" as color;
+
+.sidebar {
+  width: 25rem;
+  background: #ffffff;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  position: fixed;
+  box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+  min-height: 100vh;
+  z-index: 121;
+  transition: right .5s ease 0s;
+
+  &--open {
+    right: 0 !important;
+    overflow-y: auto;
+  }
+
+  &__img {
+    height: 7.5rem;
+    width: 7.5rem;
+    padding: 6px;
+    border: 2px dashed color.$x6;
+    border-radius: 50%;
+  }
+
+  &__user-name {
+
+  }
+
+  &__user-level {
+    color: color.$x7;
+    margin: .5rem 0 0 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: color.$x9;
+    font-size: 1.44rem;
+    transition: all .4s;
+  }
+
+  &-link--active {
+    background-color: color.$x8;
+    pointer-events: none;
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+    color: color.$x9;
+    transition: all .4s;
+    margin-left: 1rem;
+  }
+}
