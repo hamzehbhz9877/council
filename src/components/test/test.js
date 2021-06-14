@@ -178,9 +178,19 @@
 // export default Test
 
 import React from "react"
+import * as Yup from "yup"
 
 const Test = () => {
 
+
+    let schema = Yup.string().matches(/^(09([0-3]|9)[0-9]-?[0-9]{3}-?[0-9]{4})$/,"شماره همراه معتبر نمیباشد");
+
+
+    const ff=async ()=>{
+        console.log( await schema.isValid("0930185832"))
+    }
+
+    ff()
 
     return (
         <div>
