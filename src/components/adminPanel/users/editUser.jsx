@@ -32,7 +32,7 @@ const EditUser = ({close, title, data}) => {
     const validationSchema = Yup.object({
         firstName: Yup.string().min(3, "حداقل سه کاراکتر وارد کنید").required("لطفا نام را انتخاب کنید").trim(),
         lastName: Yup.string().min(3, "حداقل سه کاراکتر وارد کنید").required("لطفا نام خانوادگی  را انتخاب کنید").trim(),
-        phone: Yup.string().matches(/^(9([0-3]|9)[0-9]-?[0-9]{3}-?[0-9]{4})$/,"شماره همراه معتبر نمیباشد").trim(),
+        phone: Yup.string().matches(/^(9([0-3]|9)[0-9]-?[0-9]{3}-?[0-9]{4})$/,{message:"شماره همراه معتبر نمیباشد"}).required('لطفا شماره همراه خود را وارد کنید').trim(),
         gender: Yup.string().required("لطفا جنسیت را انتخاب کنید"),
         age: Yup.string().required("لطفا سن را انتخاب کنید"),
         districtId: Yup.string().required("لطفا محله را انتخاب کنید"),
